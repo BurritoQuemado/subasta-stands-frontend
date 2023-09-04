@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import { Popover, Transition } from '@headlessui/react'
-import LogoAbalat from '../../assets/images/logo.png'
+import Logo from '../../assets/images/logo.png'
 import {
   Bars3Icon,
   XMarkIcon,
@@ -17,15 +17,15 @@ const navigation = [
 
 const navigation_logged = [
     { 
-      name: 'Equipos visitados',
-      href: '/equipos'
+      name: 'Billetera',
+      href: '/billetera'
     },
 ]
 
 const footerNavigation = {
 
   legal: [
-    { name: 'Aviso de Privacidad', href: 'https://licon.com.mx/aviso-de-privacidad/' },
+    { name: 'Aviso de Privacidad', href: 'www.google.com' },
   ],
 }
 
@@ -46,11 +46,11 @@ class Layout extends Component{
                 <div className="flex flex-1 items-center">
                   <div className="flex w-full items-center justify-between md:w-auto">
                     <Link to="/">
-                      <span className="sr-only">Wallet Licoins</span>
+                      <span className="sr-only">Wallet PolarCoins</span>
                       <img
                         className="h-20 w-auto lg:h-28"
-                        src={LogoAbalat}
-                        alt="logo-licon"
+                        src={Logo}
+                        alt="logo-empresa"
                       />
                     </Link>
                     <div className="-mr-2 flex items-center md:hidden">
@@ -126,8 +126,8 @@ class Layout extends Component{
                       <Link to='/'>
                       <img
                         className="h-20 w-auto"
-                        src={LogoAbalat}
-                        alt="logo-licon"
+                        src={Logo}
+                        alt="logo-empresa"
                       />
                       </Link>
                     </div>
@@ -223,7 +223,7 @@ class Layout extends Component{
               </div>
               <div className="mt-12 border-t border-gray-200 py-8">
                 <p className="text-base text-gray-400 xl:text-center">
-                  &copy; 2023 2024 Grupo Licon. Todos los derechos reservados.
+                  &copy; 2023 2024 Polar Multimedia. Todos los derechos reservados.
                 </p>
               </div>
             </div>
