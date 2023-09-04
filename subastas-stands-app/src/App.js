@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { Home } from './pages'
+import { Layout } from './components';
+function App () {
 
-function App() {
+  const [user_id, setUserId] = useState(sessionStorage.getItem("user_id") || '');
+  const [logged, setLogged] = useState(sessionStorage.getItem("user_id") || false);
+
+  const setLoggedIn = (logged, user_id) => {
+    setLogged(logged);
+    setUserId(user_id);
+    sessionStorage.setItem("user_id", user_id);
+    sessionStorage.setItem("logged", logged);
+  }
+
+  const logout = () => {
+    setLogged(false);
+    setUserId('')
+    sessionStorage.setItem("user_id", null);
+    sessionStorage.setItem("logged", null);
+  }
+
+  useEffect(() => {
+    var current_user = sessionStorage.getItem("user_id");
+    var current_logged = sessionStorage.getItem("logged");
+    if(current_user !== null || current_logged !== null) {
+      setLoggedIn(current_logged, current_user);
+    }
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout logged_in={logged} logout={logout}>
+      <Routes>
+        <Route path="/" element={ <Home logged_in={logged} /> } />
+      </Routes>
+    </Layout>
   );
 }
 
