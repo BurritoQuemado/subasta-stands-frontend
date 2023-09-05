@@ -36,7 +36,7 @@ function App () {
     <Layout logged_in={logged} logout={logout}>
       <Routes>
         <Route path="/" element={ <Home logged_in={logged} /> } />
-        <Route path="/billetera" element={ <WalletPage user_id={user_id}  /> } />
+        <Route path="/billetera/:user_id" element={ <WalletPage /> } />
       </Routes>
     </Layout>
   );

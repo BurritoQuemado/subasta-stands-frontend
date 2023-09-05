@@ -1,12 +1,13 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { Wallet } from "../components"
+import dummy from "../dummy.json";
 
-function Home() {
+function WalletPage() {
     const { user_id } = useParams();
     return (
-        <h1>Aqui va el wallet</h1>
+        <Wallet name={"Ana María García"} balance={100000} history={dummy} />
     );
 }
 
-export default Home;
+export default WalletPage;
