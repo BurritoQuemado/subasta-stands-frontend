@@ -1,12 +1,11 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { MainContent } from "../components"
+import { Wallet } from "../components"
 
 function Home() {
-    const { logged } = useParams();
-    
+    const { user_id } = useParams();
     return (
-        <MainContent logged={logged}/>
+        <h1>Aqui va el wallet</h1>
     );
 }
 

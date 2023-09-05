@@ -195,7 +195,7 @@ class Layout extends Component{
               </Popover.Panel>
             </Transition>
           </Popover>
-          <main>
+          <main className="container mx-auto sm:px-6 lg:px-8">
             {children}
           </main>
           <footer className="bg-gray-50" aria-labelledby="footer-heading">

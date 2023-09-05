@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { Home } from './pages'
+import { 
+  Home,
+  WalletPage,
+} from './pages'
 import { Layout } from './components';
 function App () {
 
   const [user_id, setUserId] = useState(sessionStorage.getItem("user_id") || '');
-  const [logged, setLogged] = useState(sessionStorage.getItem("user_id") || false);
+  const [logged, setLogged] = useState(sessionStorage.getItem("user_id") || true);
 
   const setLoggedIn = (logged, user_id) => {
     setLogged(logged);
@@ -33,6 +36,7 @@ function App () {
     <Layout logged_in={logged} logout={logout}>
       <Routes>
         <Route path="/" element={ <Home logged_in={logged} /> } />
+        <Route path="/billetera" element={ <WalletPage user_id={user_id}  /> } />
       </Routes>
     </Layout>
   );
