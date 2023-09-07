@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 
 import { 
     Transactions,
-    Balance
+    Balance,
+    QRScanner
 } from "../"
 
 function Wallet({ name, balance, history}){
@@ -13,6 +14,7 @@ function Wallet({ name, balance, history}){
                     <Balance name={name} balance={balance} /> 
                 <div className="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-1">
                     <Transactions history_list={history} />
+                    <QRScanner />
                     <div className="mt-10 flex items-center justify-center gap-x-6">
                         <Link
                         to="/billetera/1"
