@@ -18,8 +18,14 @@ const navigation = [
 const navigation_logged = [
     { 
       name: 'Billetera',
-      href: '/billetera'
+      href: '/billetera',
+      target: '_self'
     },
+    {
+      name: 'Experiencia AR',
+      href: 'https://8th.io/hb8db',
+      target: '_blank'
+    }
 ]
 
 const footerNavigation = {
@@ -75,6 +81,8 @@ class Layout extends Component{
                         <Link
                           key={item.name}
                           to={item.href}
+                          target={item.target}
+                          rel="nonreferrer noreferrer"
                           className="text-base font-medium text-azul_abalat hover:text-gray-300"
                         >
                           {item.name}
@@ -154,6 +162,8 @@ class Layout extends Component{
                           <Link
                             key={item.name}
                             to={item.href}
+                            target={item.target}
+                            rel="nonreferrer noreferrer"
                             className="block rounded-md px-3 py-2 text-base font-medium text-black"
                           >
                             {item.name}
