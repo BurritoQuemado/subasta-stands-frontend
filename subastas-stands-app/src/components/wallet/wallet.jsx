@@ -14,7 +14,7 @@ function Wallet({ name, balance, history}){
                 <Balance name={name} balance={balance} />
                 <div className='mt-4 lg:mt-12'>
                     <div className="text-center">
-                        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"> Historial de transacciones: </h2>                                      
+                        <h2 className="text-3xl font-normal tracking-tight text-gray-900 sm:text-4xl"> Historial de transacciones: </h2>                                      
                     </div>
                     <div className="mx-auto mt-2 lg:mt-0 grid max-w-2xl auto-rows-fr grid-cols-1 gap-0 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-1">
                         <Transactions history_list={history} />
