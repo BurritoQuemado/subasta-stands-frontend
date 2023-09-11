@@ -7,23 +7,22 @@ function TransactionsHistory ({ history_list }) {
                 <ul className="divide-y divide-gray-300">
                     { history_list.length !== 0 ? 
                         (history_list.map((transaction) => (
-                        <li key={transaction.id} className="flex justify-between gap-x-6 py-5">
+                        <li key={transaction.id} className="flex justify-center lg:justify-between gap-x-3 py-5 px-10">
                             <div className="flex min-w-0 gap-x-4">
-                                <div className="min-w-0 flex-auto">
-                                    <p className="text-sm font-semibold leading-6 text-gray-900">{transaction.title}</p>
-                                    <p className="mt-1 truncate text-xs leading-5 text-gray-500">{transaction.date_time}</p>
+                                <div className="min-w-0 flex-auto justify-center">
+                                    <p className="text-sm font-semibold  leading-6 text-gray-900">{transaction.title}</p>
                                     {
                                         parseInt(transaction.amount) > 0 ? 
-                                            <p className="md:hidden text-sm leading-6 text-green-500">+{transaction.amount}</p>
-                                        :   <p className="md:hidden text-sm leading-6 text-red-600">{transaction.amount}</p>
+                                            <p className="md:hidden text-lg leading-6 text-center text-green-500">+{transaction.amount}</p>
+                                        :   <p className="md:hidden text-lg leading-6 text-center text-red-600">{transaction.amount}</p>
                                     }
                                 </div>
                             </div>
                             <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
                                 {
                                     parseInt(transaction.amount) > 0 ? 
-                                        <p className="text-sm leading-6 text-green-500">+{transaction.amount}</p>
-                                    :   <p className="text-sm leading-6 text-red-600">{transaction.amount}</p>
+                                        <p className="text-lg leading-6 text-green-500">+{transaction.amount}</p>
+                                    :   <p className="text-lg leading-6 text-red-600">{transaction.amount}</p>
                                 }
                             </div>
                         </li>
