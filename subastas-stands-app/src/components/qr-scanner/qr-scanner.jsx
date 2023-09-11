@@ -33,6 +33,9 @@ function Scanner ({ transactions, valid_codes, user_id }) {
         setscannedCode({});
     }
 
+    const cancel = () => {
+        setScanning(false);
+    }
     useEffect(() => {
        
     },[scannedCode, alreadyScanned, scanning, unregistered])
@@ -77,17 +80,33 @@ function Scanner ({ transactions, valid_codes, user_id }) {
     } 
     
 
+
     return (
         <>
-            <div className="mt-10 flex items-center justify-center py-2 space-x-2">
-                <button 
-                    type="button" 
-                    onClick={() => resetScanner()}
-                    className="flex w-42 items-center justify-center rounded-lg border border-transparent bg-amber-400 px-8 py-2 text-base font-medium text-white md:py-4 md:px-10 md:text-lg"
-                >
-                    Agregar Polarcoins
-                </button>
-            </div>
+            { !scanning ? 
+                (
+                    <div className="mt-10 flex items-center justify-center py-2 space-x-2">
+                        <button 
+                            type="button" 
+                            onClick={() => resetScanner()}
+                            className="flex w-42 items-center justify-center rounded-lg border border-transparent bg-green-400 px-8 py-2 text-base font-medium text-white md:py-4 md:px-10 md:text-lg"
+                        >
+                            Agregar Polarcoins
+                        </button>
+                    </div>
+                )
+                : (
+                    <div className="mt-10 flex items-center justify-center py-2 space-x-2">
+                        <button 
+                            type="button" 
+                            onClick={() => cancel()}
+                            className="flex w-42 items-center justify-center rounded-lg border border-transparent bg-amber-500 px-8 py-2 text-base font-medium text-white md:py-4 md:px-10 md:text-lg"
+                        >
+                            Cancelar
+                        </button>
+                    </div>
+                )
+            }
            { scanning ? (
                 <div className='pt-6 pb-6 pr-4 pl-4'>
                 { scanning?
