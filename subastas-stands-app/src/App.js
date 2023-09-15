@@ -3,6 +3,8 @@ import { Route, Routes } from 'react-router-dom';
 import { 
   Home,
   WalletPage,
+  LoginPage,
+  RegisterPage
 } from './pages'
 import { Layout } from './components';
 function App () {
@@ -35,8 +37,10 @@ function App () {
   return (
     <Layout logged_in={logged} logout={logout}>
       <Routes>
-        <Route path="/" element={ <Home logged_in={logged} /> } />
+        <Route path="/" element={ <Home logged_in={logged} user_id={user_id} /> } />
         <Route path="/billetera/:user_id" element={ <WalletPage /> } />
+        <Route path='/login' element={ <LoginPage /> } />
+        <Route path='/registro' element={ <RegisterPage /> } />
       </Routes>
     </Layout>
   );

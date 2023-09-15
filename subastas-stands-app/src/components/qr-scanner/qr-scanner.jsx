@@ -54,8 +54,8 @@ function Scanner ({ transactions, valid_codes, user_id }) {
             data: JSON.stringify({
                 "user_id": ""+user_id,
                 "valid_code_id": code_found.id,
-                "desciption": code_found.description,
-                "value": code_found.value
+                "title": code_found.description,
+                "amount": code_found.value
             })
         })
         .then(response => response)
