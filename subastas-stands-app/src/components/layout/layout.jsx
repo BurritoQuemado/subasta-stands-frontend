@@ -16,11 +16,6 @@ const navigation = [
 ]
 
 const navigation_logged = [
-    { 
-      name: 'Billetera',
-      href: '/billetera',
-      target: '_self'
-    },
     {
       name: 'Experiencia AR',
       href: 'https://8th.io/hb8db',

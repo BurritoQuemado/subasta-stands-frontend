@@ -4,9 +4,8 @@ import Logo from "../assets/images/logo.png";
 import { useNavigate } from 'react-router-dom';
 
 
-function LoginPage(props) {
+function LoginPage({ setLoggedIn }) {
     const navigate = useNavigate();
-    const { setLoggedIn } = props;
 
     const signin = () => {
         navigate('/');

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 
-function LoginForm (props) {
+function LoginForm ({ setLoggedIn, signin }) {
 
   const initialValues = {
       email: '',
@@ -38,11 +38,12 @@ function LoginForm (props) {
         })
         .then(response => response.json())
         .then(data => {
-          props.setLoggedIn(true, data.id);
-          props.signin();
+          console.log('success', data);
+          setLoggedIn(true, data.id);
+          signin();
         })
       }
-  }, [formErrors, formValues.email, formValues.password, isSubmit, props])
+  }, [formErrors, formValues.email, formValues.password, isSubmit, setLoggedIn, signin])
 
   const validate = (values) => {
       const errors = {};

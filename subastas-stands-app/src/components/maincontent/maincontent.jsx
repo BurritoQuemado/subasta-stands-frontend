@@ -1,11 +1,12 @@
 import React, { useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 
-function MainContent({logged}) {
+function MainContent({logged, user_id}) {
 
     const [logged_status, setLoggedStatus] = useState(false);
+    
     useEffect(() => {
-        setLoggedStatus(true);
+        setLoggedStatus(logged);
     }, [logged_status, logged])
 
     return (
@@ -50,7 +51,7 @@ function MainContent({logged}) {
                                 </h2>
                                 <div className="mt-10 flex items-center justify-center gap-x-6">
                                     <Link
-                                    to="/billetera"
+                                    to={'/billetera/'+user_id}
                                     className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                                     >
                                         Ver Mi Billetera

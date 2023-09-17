@@ -10,7 +10,7 @@ import { Layout } from './components';
 function App () {
 
   const [user_id, setUserId] = useState(sessionStorage.getItem("user_id") || '');
-  const [logged, setLogged] = useState(sessionStorage.getItem("user_id") || true);
+  const [logged, setLogged] = useState(sessionStorage.getItem("user_id") || false);
 
   const setLoggedIn = (logged, user_id) => {
     setLogged(logged);
@@ -29,6 +29,7 @@ function App () {
   useEffect(() => {
     var current_user = sessionStorage.getItem("user_id");
     var current_logged = sessionStorage.getItem("logged");
+    console.log("current data: " + logged + " " + user_id)
     if(current_user !== null || current_logged !== null) {
       setLoggedIn(current_logged, current_user);
     }
@@ -39,7 +40,7 @@ function App () {
       <Routes>
         <Route path="/" element={ <Home logged_in={logged} user_id={user_id} /> } />
         <Route path="/billetera/:user_id" element={ <WalletPage /> } />
-        <Route path='/login' element={ <LoginPage /> } />
+        <Route path='/login' element={ <LoginPage setLoggedIn={setLoggedIn} /> } />
         <Route path='/registro' element={ <RegisterPage /> } />
       </Routes>
     </Layout>

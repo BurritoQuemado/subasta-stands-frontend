@@ -1,12 +1,10 @@
 import React from "react";
-import { useParams } from "react-router-dom";
 import { MainContent } from "../components"
 
-function Home() {
-    const { logged } = useParams();
+function Home({logged_in, user_id}) {
     
     return (
-        <MainContent logged={logged}/>
+        <MainContent logged={logged_in} user_id={user_id}/>
     );
 }
 
