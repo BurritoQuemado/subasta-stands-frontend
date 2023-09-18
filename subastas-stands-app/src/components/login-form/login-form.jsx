@@ -80,7 +80,7 @@ function LoginForm ({ setLoggedIn, signin }) {
                 onChange={handleChange}
                 required
                 disabled={loading}
-                className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-black shadow-sm focus:border-azul_abalat focus:outline-none focus:ring-azul_abalat sm:text-sm"
+                className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-black shadow-sm focus:border-principal focus:outline-none focus:ring-principal sm:text-sm"
               />
             </div>
             <label htmlFor="email" className="block text-sm font-medium text-red-600">
@@ -101,7 +101,7 @@ function LoginForm ({ setLoggedIn, signin }) {
                 required
                 onChange={handleChange}
                 disabled={loading}
-                className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-black shadow-sm focus:border-azul_abalat focus:outline-none focus:ring-azul_abalat sm:text-sm"
+                className="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-black shadow-sm focus:border-principal focus:outline-none focus:ring-principal sm:text-sm"
               />
             </div>
             <label htmlFor="password" className="block text-sm font-medium text-red-600">
@@ -111,7 +111,7 @@ function LoginForm ({ setLoggedIn, signin }) {
     
           <div className="flex items-center justify-between">
             <div className="text-sm">
-              <button className="font-medium text-azul_abalat hover:text-azul_abalat" disabled={loading}>
+              <button className="font-medium text-principal hover:text-principal" disabled={loading}>
                 Recuperar contraseña
               </button>
             </div>
@@ -120,7 +120,7 @@ function LoginForm ({ setLoggedIn, signin }) {
         <div className="mt-4">
           <button
             onClick={handleSubmit}
-            className="flex w-full justify-center rounded-md border border-transparent bg-morado_abalat py-2 px-4 text-sm font-medium text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-azul_abalat focus:ring-offset-2"
+            className="flex w-full justify-center rounded-md border border-transparent bg-contraste py-2 px-4 text-sm font-medium text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-principal focus:ring-offset-2"
           >
             {loading ? (
               <svg
@@ -149,7 +149,7 @@ function LoginForm ({ setLoggedIn, signin }) {
         </div>
         <div className="flex items-center justify-between mt-4">
           <div className="text-sm">
-            <Link to='/registro' className="font-medium text-azul_abalat hover:text-azul_abalat">
+            <Link to='/registro' className="font-medium text-principal hover:text-principal">
               No tengo una cuenta
             </Link>
           </div>

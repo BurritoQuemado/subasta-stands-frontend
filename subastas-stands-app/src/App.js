@@ -4,7 +4,8 @@ import {
   Home,
   WalletPage,
   LoginPage,
-  RegisterPage
+  RegisterPage,
+  WalletDescPage
 } from './pages'
 import { Layout } from './components';
 function App () {
@@ -29,7 +30,6 @@ function App () {
   useEffect(() => {
     var current_user = sessionStorage.getItem("user_id");
     var current_logged = sessionStorage.getItem("logged");
-    console.log("current data: " + logged + " " + user_id)
     if(current_user !== null || current_logged !== null) {
       setLoggedIn(current_logged, current_user);
     }
@@ -42,6 +42,7 @@ function App () {
         <Route path="/billetera/:user_id" element={ <WalletPage /> } />
         <Route path='/login' element={ <LoginPage setLoggedIn={setLoggedIn} /> } />
         <Route path='/registro' element={ <RegisterPage /> } />
+        <Route path='/billetera-desc' element={ <WalletDescPage user_id={user_id} />} />
       </Routes>
     </Layout>
   );
