@@ -1,11 +1,11 @@
 import React from 'react';
 import { GalleryList } from '../components';
-import people_list from '../people_list';
+import art_list from '../art_list';
 
 function GalleryPage(){
     return (
         <>
-            <GalleryList title="El muro del reconocimiento" gallery={people_list} />
+            <GalleryList title="Arte Interactivo" gallery={art_list} />
         </>
     )
 }
