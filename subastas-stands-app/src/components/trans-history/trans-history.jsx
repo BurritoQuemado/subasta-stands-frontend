@@ -7,7 +7,7 @@ function TransactionsHistory ({ history_list }) {
                 <ul className="divide-y divide-gray-300">
                     { history_list.length !== 0 ? 
                         (history_list.map((transaction) => (
-                        <li key={transaction.id} className="flex justify-center lg:justify-between gap-x-3 py-5 px-10">
+                        <li key={transaction.title} className="flex justify-center lg:justify-between gap-x-3 py-5 px-10">
                             <div className="flex min-w-0 gap-x-4">
                                 <div className="min-w-0 flex-auto justify-center">
                                     <p className="text-sm font-semibold  leading-6 text-gray-900">{transaction.title}</p>

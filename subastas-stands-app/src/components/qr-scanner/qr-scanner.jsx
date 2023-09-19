@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import axios from 'axios';
 import { QrReader } from 'react-qr-reader';
 
@@ -8,17 +8,17 @@ function Scanner ({ transactions, valid_codes, user_id }) {
     const [scanning, setScanning] = useState(false);
     const [unregistered, setUnregistered] = useState(false);
     const [alreadyScanned, setAlreadyScanned] = useState(false);
-    const url = 'localhost:3000/registerTransaction';
+    const url = 'http://localhost:3000/registerTransaction';
 
     const searchCode = (code) => {
-        const code_found = valid_codes.find(valid_code => valid_code.code === code);
-        if (!code_found) {
+        const valid_code_found = valid_codes.find(valid_code => valid_code.code === code);
+        if (!valid_code_found || valid_code_found === undefined) {
             setUnregistered(true);
         } else {
-            setscannedCode(code_found);
-            const code_already_registered = transactions.find(transaction => transaction.code === code_found); 
+            setscannedCode(code);
+            const code_already_registered = transactions.find(transaction => transaction.code === code); 
             if (!code_already_registered) {
-                addBalance(code_found);
+                addBalance(code);
             } else {
                 setAlreadyScanned(true);
                 console.log('Codigo ya registrado');
@@ -35,11 +35,7 @@ function Scanner ({ transactions, valid_codes, user_id }) {
 
     const cancel = () => {
         setScanning(false);
-    }
-    useEffect(() => {
-       
-    },[scannedCode, alreadyScanned, scanning, unregistered])
-    
+    }  
 
     const addBalance = (code_found) => {
         console.log('scanned equipment',code_found.id);
@@ -123,11 +119,11 @@ function Scanner ({ transactions, valid_codes, user_id }) {
                     : null
                     } 
                 {
-                    unregistered?
-                        <div className='justify-center mt-6'>
-                            <h1 className='text-center'>Codigo QR Invalido</h1>
-                        </div>
-                        :   null
+                    !unregistered ?
+                        null
+                        :   <div className='justify-center mt-6'>
+                        <h1 className='text-center text-red-700'>Codigo QR Invalido</h1>
+                    </div>
                 } 
                 {
                     alreadyScanned ?

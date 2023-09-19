@@ -1,40 +1,41 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { json, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Wallet } from "../components"
 import dummy from "../dummy.json";
 
 function WalletPage() {
     const { user_id } = useParams();
-    const [userID, setUserId] = useState("");
-    const [transactions, setTransactions] = useState({})
-    const [valid_codes, setValidCodes] = useState({})
-    const URL = "http://localhost:3000/getTransactions"
+    const [userName, setUserName] = useState("");
+    const [userBalance, setUserBalance] = useState(0);
+    const [transactions, setTransactions] = useState([])
+    const [valid_codes, setValidCodes] = useState([])
+    const URL = "http://localhost:3000/getTransactions/"+user_id
     
     const config = {
         method: 'get',
         url: URL,
-        body: JSON.stringify({
-            "user_id": user_id
-        }),
         headers: { 
           'Content-Type': 'application/json',
           "Access-Control-Allow-Origin": "*"
         },
     };
 
-    console.log('userid', user_id)
     useEffect(() => {
 
         axios.request(config)
-        .then(data => {
-            console.log(data)
+        .then(res => {
+            setTransactions(res.data.transactions)
+            setUserName(res.data.name)
+            setUserBalance(parseInt(res.data.balance))
+            setValidCodes(res.data.valid_codes)
         })
 
     },[])
-    
+
+
     return (
-        <Wallet name={"Ana María García"} balance={100000} history={dummy} />
+        <Wallet name={userName} balance={userBalance} history={transactions} user_id={user_id} valid_codes={valid_codes} />
     );
 }
 
