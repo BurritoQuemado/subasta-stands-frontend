@@ -11,6 +11,7 @@ function Scanner ({ transactions, valid_codes, user_id }) {
     const url = 'https://subastas-stand-licon-a5fc970ae98d.herokuapp.com/registerTransaction';
 
     const searchCode = (code) => {
+
         const valid_code_found = valid_codes.find(valid_code => valid_code.code === code);
         if (!valid_code_found || valid_code_found === undefined) {
             setUnregistered(true);
@@ -18,7 +19,7 @@ function Scanner ({ transactions, valid_codes, user_id }) {
             setscannedCode(code);
             const code_already_registered = transactions.find(transaction => transaction.code === code); 
             if (!code_already_registered) {
-                addBalance(code);
+                addBalance(valid_code_found);
             } else {
                 setAlreadyScanned(true);
                 console.log('Codigo ya registrado');
