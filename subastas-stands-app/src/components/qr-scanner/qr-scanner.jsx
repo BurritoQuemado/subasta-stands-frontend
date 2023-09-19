@@ -79,7 +79,7 @@ function Scanner ({ transactions, valid_codes, user_id }) {
 
 
     return (
-        <>
+        <>  
             { !scanning ? 
                 (
                     <div className="mt-10 flex items-center justify-center py-2 space-x-2">
@@ -104,6 +104,13 @@ function Scanner ({ transactions, valid_codes, user_id }) {
                     </div>
                 )
             }
+             <div className="px-6 py-4 sm:px-6 sm:py-32 lg:px-8">
+                <div className="mx-auto max-w-2xl text-center">
+                    <p className="mx-auto mt-6 max-w-xl text-lg leading-6 text-gray-600 text-justify">
+                        Para agregar más cryptolicoins a tu cuenta, escanea el código QR de los equipos o que te presentaran al termino de cada platica.
+                    </p>
+                </div>
+            </div>
            { scanning ? (
                 <div className='pt-6 pb-6 pr-4 pl-4'>
                 { scanning?
