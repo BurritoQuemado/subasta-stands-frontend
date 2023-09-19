@@ -38,7 +38,6 @@ function LoginForm ({ setLoggedIn, signin }) {
         })
         .then(response => response.json())
         .then(data => {
-          console.log('success', data);
           setLoggedIn(true, data.id);
           signin();
         })
