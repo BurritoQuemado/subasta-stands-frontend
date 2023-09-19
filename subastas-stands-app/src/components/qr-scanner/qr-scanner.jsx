@@ -89,9 +89,9 @@ function Scanner ({ transactions, valid_codes, user_id }) {
                         <button 
                             type="button" 
                             onClick={() => resetScanner()}
-                            className="flex w-42 items-center justify-center rounded-lg border border-transparent bg-green-400 px-8 py-2 text-base font-medium text-white md:py-4 md:px-10 md:text-lg"
+                            className="flex w-42 items-center justify-center rounded-lg border border-transparent bg-resalto px-8 py-2 text-base font-medium text-white md:py-4 md:px-10 md:text-lg"
                         >
-                            Agregar Polarcoins
+                            Agregar Cryptolicoins
                         </button>
                     </div>
                 )

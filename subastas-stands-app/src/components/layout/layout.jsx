@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import { Popover, Transition } from '@headlessui/react'
 import Logo from '../../assets/images/logo.png'
+import LogoLicon from '../../assets/images/logo-licon.png'
 import {
   Bars3Icon,
   XMarkIcon,
@@ -13,6 +14,10 @@ const navigation = [
       name: 'Inicio', 
       href: '/'
     },
+    {
+      name: 'Galería', 
+      href: '/galeria'
+    }
 ]
 
 const navigation_logged = [
@@ -26,7 +31,9 @@ const navigation_logged = [
 const footerNavigation = {
 
   legal: [
-    { name: 'Aviso de Privacidad', href: 'www.google.com' },
+    { name: 'Aviso de Privacidad', 
+      href: 'https://licon.com.mx/aviso-de-privacidad/' 
+    },
   ],
 }
 
@@ -45,17 +52,17 @@ class Layout extends Component{
                 aria-label="Global"
               >
                 <div className="flex flex-1 items-center">
-                  <div className="flex w-full items-center justify-between md:w-auto">
+                  <div className="flex w-full items-center align-middle justify-between md:w-auto">
                     <Link to="/">
-                      <span className="sr-only">Wallet PolarCoins</span>
+                      <span className="sr-only">Wallet Cryptolicoins</span>
                       <img
-                        className="h-20 w-auto lg:h-28"
+                        className="h-6 w-auto lg:h-28"
                         src={Logo}
                         alt="logo-empresa"
                       />
                     </Link>
                     <div className="-mr-2 flex items-center md:hidden">
-                      <Popover.Button className="focus-ring-inset inline-flex items-center justify-center rounded-md bg-azul_abalat p-2 text-white focus:outline-none focus:ring-2 focus:ring-white">
+                      <Popover.Button className="focus-ring-inset inline-flex items-center justify-center rounded-md bg-principal p-2 text-white focus:outline-none focus:ring-2 focus:ring-white">
                         <span className="sr-only">Open main menu</span>
                         <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                       </Popover.Button>
@@ -66,7 +73,7 @@ class Layout extends Component{
                       <Link
                         key={item.name}
                         to={item.href}
-                        className="text-base font-medium text-azul_abalat hover:text-gray-300"
+                        className="text-base font-medium text-principal hover:text-gray-300"
                       >
                         {item.name}
                       </Link>
@@ -78,7 +85,7 @@ class Layout extends Component{
                           to={item.href}
                           target={item.target}
                           rel="nonreferrer noreferrer"
-                          className="text-base font-medium text-azul_abalat hover:text-gray-300"
+                          className="text-base font-medium text-principal hover:text-gray-300"
                         >
                           {item.name}
                         </Link>
@@ -92,17 +99,17 @@ class Layout extends Component{
                      <Link
                         to='/'
                         onClick={logout}
-                        className="inline-flex items-center rounded-md border border-transparent bg-azul_abalat px-4 py-2 text-base font-medium text-white"
+                        className="inline-flex items-center rounded-md border border-transparent bg-principal px-4 py-2 text-base font-medium text-white"
                       >
                      Salir
                    </Link>
                   : <>
-                    <Link to="/registro" className="text-base font-medium text-azul_abalat">
+                    <Link to="/registro" className="text-base font-medium text-principal">
                       Registrarse
                     </Link>
                     <Link
                       to="/login"
-                      className="inline-flex items-center rounded-md border border-transparent bg-azul_abalat px-4 py-2 text-base font-medium text-white"
+                      className="inline-flex items-center rounded-md border border-transparent bg-principal px-4 py-2 text-base font-medium text-white"
                     >
                       Ingresar
                     </Link>
@@ -110,7 +117,7 @@ class Layout extends Component{
                   
                 </div>
               </nav>
-              <hr className='bg-azul_abalat w-full h-2 lg:h-4' />
+              <hr className='mt-4 bg-principal w-full h-2 lg:h-4' />
             </div>
   
             <Transition
@@ -128,7 +135,7 @@ class Layout extends Component{
                     <div>
                       <Link to='/'>
                       <img
-                        className="h-20 w-auto"
+                        className="h-4 w-auto"
                         src={Logo}
                         alt="logo-empresa"
                       />
@@ -171,7 +178,7 @@ class Layout extends Component{
                       <Link
                         to='/'
                         onClick={logout}
-                        className="block w-full rounded-md bg-azul_abalat py-3 px-4 text-center font-medium text-white shadow hover:from-teal-600 hover:to-cyan-700"
+                        className="block w-full rounded-md bg-principal py-3 px-4 text-center font-medium text-white shadow hover:from-teal-600 hover:to-cyan-700"
                       >
                         Salir
                       </Link>
@@ -180,7 +187,7 @@ class Layout extends Component{
                     <div className="mt-6 px-5">
                       <Link
                         to="/registro"
-                        className="block w-full rounded-md bg-azul_abalat py-3 px-4 text-center font-medium text-white shadow hover:from-teal-600 hover:to-cyan-700"
+                        className="block w-full rounded-md bg-principal py-3 px-4 text-center font-medium text-white shadow hover:from-teal-600 hover:to-cyan-700"
                       >
                         Registrarse
                       </Link>
@@ -188,7 +195,7 @@ class Layout extends Component{
                     <div className="mt-6 px-5">
                       <p className="text-center text-base font-medium text-gray-500">
                         Ya tengo una cuenta.{' '}
-                        <Link to="/login" className="text-morado_abalat hover:underline">
+                        <Link to="/login" className="text-contraste hover:underline">
                           Ingresar
                         </Link>
                       </p>
@@ -209,9 +216,16 @@ class Layout extends Component{
             </h2>
             <div className="mx-auto max-w-md px-4 sm:max-w-7xl sm:px-6 lg:px-8 lg:pt-10">
               <div className="xl:grid xl:grid-cols-3 xl:gap-8 justify-center">
-                <div className="mt-12 grid grid-cols-1 gap-8 xl:col-span-2 xl:mt-0">
+                <div className="py-4 sm:mx-auto sm:w-full sm:max-w-md">
+                    <img
+                        className="mx-auto h-32 w-auto"
+                        src={ LogoLicon }
+                        alt="logo_grupolicon"
+                    />
+                </div>
+                <div className="mt-0 grid grid-cols-1 gap-8 xl:col-span-2 xl:mt-0">
                   <div className="md:grid md:grid-cols-1 md:gap-8">
-                    <div className="mt-12 md:mt-0">
+                    <div className="mt-4 md:mt-0">
                       <h3 className="text-base font-medium text-gray-900">Legal</h3>
                       <ul className="mt-4 space-y-4">
                         {footerNavigation.legal.map((item) => (

@@ -8,8 +8,9 @@ module.exports = {
       colors: {
         teal: colors.teal,
         cyan: colors.cyan,
-        azul_abalat: '#0075C9',
-        morado_abalat: '#691F74'
+        principal: '#c54d99',
+        contraste: '#040404',
+        resalto: '#aa8d3c'
       },
     },
   },

@@ -6,6 +6,7 @@ import dummy from "../dummy.json";
 
 function WalletPage() {
     const { user_id } = useParams();
+    const [userID, setUserId] = useState("");
     const [transactions, setTransactions] = useState({})
     const [valid_codes, setValidCodes] = useState({})
     const URL = "http://localhost:3000/getTransactions"

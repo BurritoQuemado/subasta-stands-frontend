@@ -97,7 +97,7 @@ function RegisterForm ({ login }) {
                                     id="name"
                                     autoComplete="given-name"
                                     onChange={handleChange}
-                                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-azul_abalat focus:ring-azul_abalat sm:text-sm"
+                                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-principal focus:ring-principal sm:text-sm"
                                 />
                                 <label htmlFor="name" className="block text-sm font-medium text-red-600">
                                     {formErrors.name}
@@ -114,7 +114,7 @@ function RegisterForm ({ login }) {
                                     id="lname"
                                     onChange={handleChange}
                                     autoComplete="family-name"
-                                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-azul_abalat focus:ring-azul_abalat sm:text-sm"
+                                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-principal focus:ring-principal sm:text-sm"
                                 />
                                 <label htmlFor="lname" className="block text-sm font-medium text-red-600">
                                     {formErrors.lname}
@@ -131,7 +131,7 @@ function RegisterForm ({ login }) {
                                     id="email"
                                     autoComplete="email"
                                     onChange={handleChange}
-                                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-azul_abalat focus:ring-azul_abalat sm:text-sm"
+                                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-principal focus:ring-principal sm:text-sm"
                                 />
                                 <label htmlFor="email" className="block text-sm font-medium text-red-600">
                                     {formErrors.email}
@@ -147,7 +147,7 @@ function RegisterForm ({ login }) {
                                     name="password"
                                     id="password"
                                     onChange={handleChange}
-                                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-azul_abalat focus:ring-azul_abalat sm:text-sm"
+                                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-principal focus:ring-principal sm:text-sm"
                                 />
                                 <label htmlFor="password" className="block text-sm font-medium text-red-600">
                                     {formErrors.password}
@@ -164,7 +164,7 @@ function RegisterForm ({ login }) {
                                     name="confirm_password"
                                     id="confirm_pasword"
                                     onChange={handleChange}
-                                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-azul_abalat focus:ring-azul_abalat sm:text-sm"
+                                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-principal focus:ring-principal sm:text-sm"
                                 />
                                 <label htmlFor="confirm_password" className="block text-sm font-medium text-red-600">
                                     {formErrors.confirm_password}
@@ -176,15 +176,15 @@ function RegisterForm ({ login }) {
                 <div className="bg-gray-50 px-4 py-3 text-center sm:px-6">
                     <button
                         onClick={handleSubmit}
-                        className="inline-flex justify-center rounded-md border border-transparent bg-azul_abalat py-2 px-4 text-sm lg:text-2xl lg:font-semibold font-medium text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-azul_abalat focus:ring-offset-2"
+                        className="inline-flex justify-center rounded-md border border-transparent bg-principal py-2 px-4 text-sm lg:text-2xl lg:font-semibold font-medium text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-principal focus:ring-offset-2"
                         >
                         Registrarse
                     </button>
                 </div>
             </div>
-            <div className="flex items-center justify-between mt-4">
+            <div className="flex items-center justify-center mt-4">
                 <div className="text-sm">
-                    <Link to='/login' className="font-medium text-azul_abalat hover:text-azul_abalat">
+                    <Link to='/login' className="font-medium text-principal hover:text-principal">
                         Ya tengo una cuenta
                     </Link>
                 </div>
