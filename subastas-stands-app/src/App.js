@@ -6,7 +6,9 @@ import {
   LoginPage,
   RegisterPage,
   WalletDescPage,
-  GalleryPage
+  GalleryPage,
+  PeoplePage,
+  PersonPage
 } from './pages'
 import { Layout } from './components';
 function App () {
@@ -45,6 +47,8 @@ function App () {
         <Route path='/registro' element={ <RegisterPage /> } />
         <Route path='/billetera-desc' element={ <WalletDescPage user_id={user_id} />} />
         <Route path='/galeria' element={ <GalleryPage /> } />
+        <Route path='/muro-del-reconocimiento' element={ <PeoplePage /> } />
+        <Route path='/muro-del-reconocimiento/:person_id' element={ <PersonPage /> } />
       </Routes>
     </Layout>
   );
