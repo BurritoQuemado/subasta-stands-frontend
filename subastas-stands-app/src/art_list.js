@@ -23,109 +23,127 @@ const art_list = [
       "id": 1,
       "title": "Un colorido día de análisis",
       "desc": "Inteligencia Artificial en Óleo",
-      "img": ColoridoDiaImg
+      "img": ColoridoDiaImg,
+      "href": "https://8th.io/t6un2"
     },
     {
       "id": 2,
       "title": "RH Positivo",
       "desc": "Inteligencia Artificial en Acrílico",
-      "img": RHPositivoImg
+      "img": RHPositivoImg,
+      "href": "https://8th.io/t6un2"
     },
     {
       "id": 3,
       "title": "Microscopio y Memoria: Un Vistazo al Plasma",
       "desc": "Fantasía Artificial en tinta",
-      "img": MicroscopioMemoriaImg
+      "img": MicroscopioMemoriaImg,
+      "href": "https://8th.io/t6un2"
     },
     {
       "id": 4,
       "title": "Diagnóstico Cromático: El Arte del Hemograma",
       "desc": "Fantasía Artificial en Tinta",
-      "img": DiagnosticoCromaticoImg
+      "img": DiagnosticoCromaticoImg,
+      "href": "https://8th.io/t6un2"
     },
     {
         "id": 5,
         "title": "Estudio en Rojo",
         "desc": "Arte Urbano Artificial en Aerosol",
-        "img": EstudioRojoImg
+        "img": EstudioRojoImg,
+        "href": "https://8th.io/t6un2"
       },
       {
         "id": 6,
         "title": "El Don de la Vida: Retratos de Donantes",
         "desc": "Éxpresionismo Artificial sobre Lienzo",
-        "img": DonVidaImg
+        "img": DonVidaImg,
+        "href": "https://8th.io/t6un2"
       },
       {
         "id": 7,
         "title": "Ecosistema en Miniatura: Vida en el Gel",
         "desc": "Expresionismo Artificial",
-        "img": EcosistemaMiniImg
+        "img": EcosistemaMiniImg,
+        "href": "https://8th.io/t6un2"
       },
       {
         "id": 8,
         "title": "El Lienzo de la Clínica: Gel en Primer Plano",
         "desc": "Expesionismo Artificial",
-        "img": LienzoClinicaImg
+        "img": LienzoClinicaImg,
+        "href": "https://8th.io/t6un2"
       },
       {
         "id": 9,
         "title": "Agarosa Abstracta: El Gel como Metáfora",
         "desc": "Expresionismo artificial",
-        "img": AgarosaAbstractaImg
+        "img": AgarosaAbstractaImg,
+        "href": "https://8th.io/t6un2"
       },
       {
         "id": 10,
         "title": "Centrífuga de Sueños: Spinning hacia la Verdad",
         "desc": "Acrilico artificial",
-        "img": CentrifugaSuenosImg
+        "img": CentrifugaSuenosImg,
+        "href": "https://8th.io/t6un2"
       },
       {
         "id": 11,
         "title": "Entre Probetas y otras: Un Brindis al Análisis",
         "desc": "Acrílico Anónimo",
-        "img": EntreProbetasImg
+        "img": EntreProbetasImg,
+        "href": "https://8th.io/t6un2"
       },
       {
         "id": 12,
         "title": "Fragmentos Celulares: Un Mosaico Sanguíneo",
         "desc": "Fotografía Artificial",
-        "img": FragmentosCelularesImg
+        "img": FragmentosCelularesImg,
+        "href": "https://8th.io/t6un2"
       },
       {
         "id": 13,
         "title": "Estampados de Coagulación y Texturas de Trombina",
         "desc": "Óleo Artificial",
-        "img": EstampadosCoagulacionImg
+        "img": EstampadosCoagulacionImg,
+        "href": "https://8th.io/t6un2"
       },
       {
         "id": 14,
         "title": "Análisis en Acuarela: Diluciones de la Realidad",
         "desc": "Acuarela Artificial",
-        "img": AnalisisAcuarelaImg
+        "img": AnalisisAcuarelaImg,
+        "href": "https://8th.io/t6un2"
       },
       {
         "id": 15,
         "title": "Tubos y Tonos: La Paleta del Inmunohematólogo",
         "desc": "Acrílico Artificial",
-        "img": TubosTonosImg
+        "img": TubosTonosImg,
+        "href": "https://8th.io/t6un2"
       },
       {
         "id": 16,
         "title": "Serología en Sepia: El Tono de los Test",
         "desc": "Fotografía en Acrílico Artificial",
-        "img": SerologiaSepiaImg
+        "img": SerologiaSepiaImg,
+        "href": "https://8th.io/t6un2"
       },
       {
         "id": 17,
         "title": "Sufrida Vida: La Transfusión como Arte",
         "desc": "Óleo Artificial",
-        "img": SufridaVidaImg
+        "img": SufridaVidaImg,
+        "href": "https://8th.io/t6un2"
       },
       {
         "id": 18,
         "title": "La Danza de los Anticuerpos",
         "desc": "Expresionismo Artificial",
-        "img": DanzaAnticuerposImg
+        "img": DanzaAnticuerposImg,
+        "href": "https://8th.io/t6un2"  
       }
   ]
   

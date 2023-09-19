@@ -19,10 +19,10 @@ function WalletDesc({user_id}) {
                         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                             Bienvenido a tu cartera digital de CryptoLICOINS.
                         </h2>
-                        <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">
+                        <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-justify text-gray-600">
                         Aquí podrás consultar la cantidad de monedas digitales que irás acumulando a través de visitas a los diferentes espacios de nuestro stand. Sólo por registrarte ya eres tienes <b>1,500</b> cryptolicoins.
                         </p>
-                        <p className="mx-auto mt-6 max-w-xl text-m leading-8 text-gray-600">
+                        <p className="mx-auto mt-6 max-w-xl text-m leading-8 text-justify text-gray-600">
                             Con estas monedas podrás acceder a la subasta de arte que llevaremos a cabo <b>el ultimo día del evento</b>.
                         </p>
                         <div className="mt-10 flex items-center justify-center gap-x-6">

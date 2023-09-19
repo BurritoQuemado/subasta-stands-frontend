@@ -25,13 +25,13 @@ function MainContent({logged, user_id}) {
                         <div className="bg-white">
                             <div className="px-6 py-12 sm:px-6 sm:py-32 lg:px-8">
                                 <div className="mx-auto max-w-2xl text-center">
-                                    <p className="mx-auto mt-2 max-w-xl text-lg leading-8 text-gray-600">
+                                    <p className="mx-auto mt-2 max-w-xl text-lg text-justify leading-8 text-gray-600">
                                         Te damos la bienvenida a esta galería única en el mundo, inspirada en el reconocimiento a la labor de un grupo de <b>imparables</b> héroes anónimos que son la pieza inicial del proceso de sanación para toda la humanidad.
                                     </p>
-                                    <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">
+                                    <p className="mx-auto mt-6 max-w-xl text-lg text-justify leading-8 text-gray-600">
                                         Esta aplicación te servirá para ser envuelto en una dinámica <b>crypto-artística</b>, por lo que te solicitaremos algunos datos únicamente con el fin lúdico de reconocer tu participación.
                                     </p>
-                                    <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">
+                                    <p className="mx-auto mt-6 max-w-xl text-lg text-justify leading-8 text-gray-600">
                                         Si es la primera vez que ingresas, haz click en el botón <b>registrarse</b>, si ya ingresaste anteriormente, haz click en <b>Iniciar sesión</b>
                                     </p>
                                     <div className="mt-10 flex items-center justify-center gap-x-6">

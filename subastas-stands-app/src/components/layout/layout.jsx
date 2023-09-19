@@ -23,8 +23,8 @@ const navigation = [
 const navigation_logged = [
     {
       name: 'Experiencia AR',
-      href: 'https://8th.io/hb8db',
-      target: '_blank'
+      href: '/galeria',
+      target: '_self'
     }
 ]
 

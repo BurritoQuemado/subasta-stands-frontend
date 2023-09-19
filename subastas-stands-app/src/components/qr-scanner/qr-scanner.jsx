@@ -8,7 +8,7 @@ function Scanner ({ transactions, valid_codes, user_id }) {
     const [scanning, setScanning] = useState(false);
     const [unregistered, setUnregistered] = useState(false);
     const [alreadyScanned, setAlreadyScanned] = useState(false);
-    const url = 'http://localhost:3000/registerTransaction';
+    const url = 'https://subastas-stand-licon-a5fc970ae98d.herokuapp.com/registerTransaction';
 
     const searchCode = (code) => {
         const valid_code_found = valid_codes.find(valid_code => valid_code.code === code);
