@@ -56,7 +56,7 @@ class Layout extends Component{
                     <Link to="/">
                       <span className="sr-only">Wallet Cryptolicoins</span>
                       <img
-                        className="h-6 w-auto lg:h-28"
+                        className="h-6 w-auto lg:h-8"
                         src={Logo}
                         alt="logo-empresa"
                       />
@@ -129,7 +129,7 @@ class Layout extends Component{
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Popover.Panel focus className="absolute inset-x-0 top-0 origin-top transform p-2 transition md:hidden">
+              <Popover.Panel focus className="absolute inset-x-0 top-2 origin-top transform p-2 transition md:hidden">
                 <div className="overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-black ring-opacity-5">
                   <div className="flex items-center justify-between px-5 pt-4">
                     <div>
