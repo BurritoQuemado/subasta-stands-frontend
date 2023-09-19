@@ -10,7 +10,7 @@ function WalletPage() {
     const [userBalance, setUserBalance] = useState(0);
     const [transactions, setTransactions] = useState([])
     const [valid_codes, setValidCodes] = useState([])
-    const URL = "http://localhost:3000/getTransactions/"+user_id
+    const URL = "https://subastas-stand-licon-a5fc970ae98d.herokuapp.com/getTransactions/"+user_id
     
     const config = {
         method: 'get',
