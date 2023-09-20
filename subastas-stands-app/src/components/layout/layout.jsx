@@ -27,7 +27,7 @@ const navigation_logged = [
       target: '_self'
     },
     {
-      name: "Billetera Cryptolocoins",
+      name: "Billetera Cryptolicoins",
       href: '/billetera-desc',
       target: '_self'
     }
