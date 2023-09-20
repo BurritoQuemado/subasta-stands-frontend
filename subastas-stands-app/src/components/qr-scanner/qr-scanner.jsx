@@ -107,7 +107,7 @@ function Scanner ({ transactions, valid_codes, user_id }) {
              <div className="px-6 py-4 sm:px-6 sm:py-32 lg:px-8">
                 <div className="mx-auto max-w-2xl text-center">
                     <p className="mx-auto mt-6 max-w-xl text-lg leading-6 text-gray-600 text-justify">
-                        Para agregar más cryptolicoins a tu cuenta, escanea el código QR de los equipos o que te presentaran al termino de cada platica.
+                        Para agregar más cryptolicoins a tu cuenta, escanea el código QR que te presentarán en cada estación/ponencia.
                     </p>
                 </div>
             </div>
