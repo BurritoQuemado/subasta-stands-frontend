@@ -22,8 +22,13 @@ const navigation = [
 
 const navigation_logged = [
     {
-      name: 'Experiencia AR',
-      href: '/galeria',
+      name: 'Muro del Reconocimiento',
+      href: '/muro-del-reconocimiento',
+      target: '_self'
+    },
+    {
+      name: "Billetera Cryptolocoins",
+      href: '/billetera-desc',
       target: '_self'
     }
 ]
