@@ -101,14 +101,14 @@ const art_list = [
         "title": "Fragmentos Celulares: Un Mosaico Sanguíneo",
         "desc": "Fotografía Artificial",
         "img": FragmentosCelularesImg,
-        "href": "https://8th.io/t6un2"
+        "href": "https://8th.io/5fv7x"
       },
       {
         "id": 13,
         "title": "Estampados de Coagulación y Texturas de Trombina",
         "desc": "Óleo Artificial",
         "img": EstampadosCoagulacionImg,
-        "href": "https://8th.io/t6un2"
+        "href": "https://8th.io/5fv7x"
       },
       {
         "id": 14,
@@ -122,14 +122,14 @@ const art_list = [
         "title": "Tubos y Tonos: La Paleta del Inmunohematólogo",
         "desc": "Acrílico Artificial",
         "img": TubosTonosImg,
-        "href": "https://8th.io/t6un2"
+        "href": "https://8th.io/5fv7x"
       },
       {
         "id": 16,
         "title": "Serología en Sepia: El Tono de los Test",
         "desc": "Fotografía en Acrílico Artificial",
         "img": SerologiaSepiaImg,
-        "href": "https://8th.io/t6un2"
+        "href": "https://8th.io/5fv7x"
       },
       {
         "id": 17,
@@ -143,7 +143,7 @@ const art_list = [
         "title": "La Danza de los Anticuerpos",
         "desc": "Expresionismo Artificial",
         "img": DanzaAnticuerposImg,
-        "href": "https://8th.io/t6un2"  
+        "href": "https://8th.io/5fv7x"  
       }
   ]
   
