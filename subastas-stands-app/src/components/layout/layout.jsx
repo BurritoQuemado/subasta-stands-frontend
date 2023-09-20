@@ -17,15 +17,15 @@ const navigation = [
     {
       name: 'Galería', 
       href: '/galeria-arte'
-    }
+    },
+    {
+      name: 'Muro del Reconocimiento',
+      href: '/galeria'
+    },
 ]
 
 const navigation_logged = [
-    {
-      name: 'Muro del Reconocimiento',
-      href: '/galeria',
-      target: '_self'
-    },
+
     {
       name: "Cartera Cryptolicoins",
       href: '/cartera-desc',
