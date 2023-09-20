@@ -59,9 +59,6 @@ function MainContent({logged, user_id}) {
                                         Esta es tu guía de arte interactivo LICON.
                                     </h2>
                                     <p className="mx-auto mt-6 max-w-xl text-lg leading-6 text-gray-600 text-justify">
-                                        <b>Experiencia AR</b> te llevará a una experiencia inversiva de nuestro arte a través de la cámara de tu teléfono, solo con enfocar cualquiera de nuestros cuadros, con lo que podrá tomar fotos o grabar video de esta experiencia.
-                                    </p>
-                                    <p className="mx-auto mt-6 max-w-xl text-lg leading-6 text-gray-600 text-justify">
                                         <b>Galería</b> es un recorrido por las distintas obras que puedes encontrar en nuestra galería.
                                     </p>
                                     <p className="mx-auto mt-6 max-w-xl text-lg leading-6 text-gray-600 text-justify">
@@ -71,14 +68,6 @@ function MainContent({logged, user_id}) {
                                         <b>Cartera Cryptolicoins</b> Es una cartera de monedas digitales que podrá adquirir visitando nuestro stand y usarlas para subastar alguna de nuestras obras.
                                     </p>
                                     <div className="mt-10 grid grid-cols-1 items-center justify-center gap-6">
-                                        <Link
-                                            to="https://8th.io/hb8db"
-                                            target="_blank"
-                                            rel="nonreferrer noreferrer"
-                                            className="rounded-md bg-red-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
-                                            >
-                                            Experiencia AR
-                                        </Link>
                                         <Link
                                         to={'/galeria'}
                                         className="rounded-md bg-principal px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-principal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-principal"
