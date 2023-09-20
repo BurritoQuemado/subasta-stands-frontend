@@ -80,7 +80,7 @@ const art_list = [
         "title": "Agarosa Abstracta: El Gel como Metáfora",
         "desc": "Expresionismo artificial",
         "img": AgarosaAbstractaImg,
-        "href": "https://8th.io/8th.io/2mdk5"
+        "href": "https://8th.io/2mdk5"
       },
       {
         "id": 10,
