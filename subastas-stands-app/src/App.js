@@ -42,10 +42,10 @@ function App () {
     <Layout logged_in={logged} logout={logout}>
       <Routes>
         <Route path="/" element={ <Home logged_in={logged} user_id={user_id} /> } />
-        <Route path="/billetera/:user_id" element={ <WalletPage /> } />
+        <Route path="/cartera/:user_id" element={ <WalletPage /> } />
         <Route path='/login' element={ <LoginPage setLoggedIn={setLoggedIn} /> } />
         <Route path='/registro' element={ <RegisterPage /> } />
-        <Route path='/billetera-desc' element={ <WalletDescPage user_id={user_id} />} />
+        <Route path='/cartera-desc' element={ <WalletDescPage user_id={user_id} />} />
         <Route path='/galeria' element={ <GalleryPage /> } />
         <Route path='/muro-del-reconocimiento' element={ <PeoplePage /> } />
         <Route path='/muro-del-reconocimiento/:person_id' element={ <PersonPage /> } />

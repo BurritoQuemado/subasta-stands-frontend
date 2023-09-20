@@ -51,7 +51,7 @@ function GalleyList ({ gallery, title }) {
                             El muro del reconocimiento
                         </Link>
                         <Link
-                        to={'/billetera-desc'}
+                        to={'/cartera-desc'}
                         className="rounded-md bg-principal px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-principal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-principal"
                         >
                             Cartera Cryptolicoins
