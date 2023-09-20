@@ -19,14 +19,14 @@ function Scanner ({ transactions, valid_codes, user_id }) {
             setscannedCode(code);
             const code_already_registered = transactions.find(transaction => transaction.code === code); 
             if (!code_already_registered) {
-                addBalance(valid_code_found);
+                const response = addBalance(valid_code_found);
+                console.log(response);
             } else {
                 setAlreadyScanned(true);
                 console.log('Codigo ya registrado');
             }
         }
     }
-
     const resetScanner = () => {
         setAlreadyScanned(false);
         setScanning(true);
@@ -38,30 +38,26 @@ function Scanner ({ transactions, valid_codes, user_id }) {
         setScanning(false);
     }  
 
-    const addBalance = (code_found) => {
-        console.log('scanned equipment',code_found.id);
-
-        axios.request(url,{
-            method: 'post',
-            url: url,
-            headers: { 
-                'Content-Type': 'application/json',
-                "Access-Control-Allow-Origin": "*"
-            },
-            data: JSON.stringify({
-                "user_id": ""+user_id,
-                "valid_code_id": code_found.id,
-                "title": code_found.description,
-                "amount": code_found.value
+    const addBalance = async (code_found) => {
+        try {
+            axios.request(url,{
+                method: 'post',
+                url: url,
+                headers: { 
+                    'Content-Type': 'application/json',
+                    "Access-Control-Allow-Origin": "*"
+                },
+                data: JSON.stringify({
+                    "user_id": ""+user_id,
+                    "valid_code_id": code_found.id,
+                    "title": code_found.description,
+                    "amount": code_found.value
+                })
             })
-        })
-        .then(response => response)
-        .then(res => res.data[0])
-        .then(resp => console.log(resp))
-        .then(window.location.reload(true))
-        .catch(err => console.error(err))
 
-        return false;
+        } catch (err) {
+            console.error(err)
+        }
     }
 
     const handleError = (err) => {
@@ -72,7 +68,7 @@ function Scanner ({ transactions, valid_codes, user_id }) {
         if(data != null) {
             setScanning(false);
             searchCode(data.text);
-            data = null;
+            this.scanner.reactivate()   
         }
     } 
     
@@ -123,6 +119,7 @@ function Scanner ({ transactions, valid_codes, user_id }) {
                             facingMode: 'environment'
                         }
                     }
+                    ref={node => { this.scanner = node;}}
                     />
                     : null
                     } 
