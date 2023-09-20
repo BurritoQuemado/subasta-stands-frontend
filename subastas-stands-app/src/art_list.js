@@ -38,14 +38,14 @@ const art_list = [
       "title": "Microscopio y Memoria: Un Vistazo al Plasma",
       "desc": "Fantasía Artificial en tinta",
       "img": MicroscopioMemoriaImg,
-      "href": "https://8th.io/t6un2"
+      "href": "https://8th.io/fchc8"
     },
     {
       "id": 4,
       "title": "Diagnóstico Cromático: El Arte del Hemograma",
       "desc": "Fantasía Artificial en Tinta",
       "img": DiagnosticoCromaticoImg,
-      "href": "https://8th.io/t6un2"
+      "href": "https://8th.io/fchc8"
     },
     {
         "id": 5,
@@ -59,7 +59,7 @@ const art_list = [
         "title": "El Don de la Vida: Retratos de Donantes",
         "desc": "Éxpresionismo Artificial sobre Lienzo",
         "img": DonVidaImg,
-        "href": "https://8th.io/t6un2"
+        "href": "https://8th.io/fchc8"
       },
       {
         "id": 7,
@@ -87,14 +87,14 @@ const art_list = [
         "title": "Centrífuga de Sueños: Spinning hacia la Verdad",
         "desc": "Acrilico artificial",
         "img": CentrifugaSuenosImg,
-        "href": "https://8th.io/t6un2"
+        "href": "https://8th.io/fchc8"
       },
       {
         "id": 11,
         "title": "Entre Probetas y otras: Un Brindis al Análisis",
         "desc": "Acrílico Anónimo",
         "img": EntreProbetasImg,
-        "href": "https://8th.io/t6un2"
+        "href": "https://8th.io/fchc8"
       },
       {
         "id": 12,
@@ -115,7 +115,7 @@ const art_list = [
         "title": "Análisis en Acuarela: Diluciones de la Realidad",
         "desc": "Acuarela Artificial",
         "img": AnalisisAcuarelaImg,
-        "href": "https://8th.io/t6un2"
+        "href": "https://8th.io/5fv7x"
       },
       {
         "id": 15,
@@ -143,7 +143,7 @@ const art_list = [
         "title": "La Danza de los Anticuerpos",
         "desc": "Expresionismo Artificial",
         "img": DanzaAnticuerposImg,
-        "href": "https://8th.io/5fv7x"  
+        "href": "https://8th.io/t6un2"  
       }
   ]
   
