@@ -5,7 +5,7 @@ function ListItem({ item}) {
         
         <div>
             <Link 
-                to={'/muro-del-reconocimiento/'+item.id}
+                to={'/galeria/'+item.id}
             >
                 <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
                 <img

@@ -46,9 +46,9 @@ function App () {
         <Route path='/login' element={ <LoginPage setLoggedIn={setLoggedIn} /> } />
         <Route path='/registro' element={ <RegisterPage /> } />
         <Route path='/cartera-desc' element={ <WalletDescPage user_id={user_id} />} />
-        <Route path='/galeria' element={ <GalleryPage /> } />
-        <Route path='/muro-del-reconocimiento' element={ <PeoplePage /> } />
-        <Route path='/muro-del-reconocimiento/:person_id' element={ <PersonPage /> } />
+        <Route path='/galeria-arte' element={ <GalleryPage /> } />
+        <Route path='/galeria' element={ <PeoplePage /> } />
+        <Route path='/galeria/:person_id' element={ <PersonPage /> } />
       </Routes>
     </Layout>
   );

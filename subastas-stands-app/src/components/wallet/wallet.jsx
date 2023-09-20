@@ -23,13 +23,13 @@ function Wallet({ name, balance, history, user_id, valid_codes}){
                 <QRScanner user_id={user_id} valid_codes={valid_codes} transactions={history}/>
                 <div className="mt-10 grid grid-cols-1 items-center justify-center gap-6 m-16 text-center">
                     <Link
-                    to={'/galeria'}
+                    to={'/galeria-arte'}
                     className="rounded-md bg-principal px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-principal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-principal"
                     >
                         Galería
                     </Link>
                     <Link
-                    to={'/muro-del-reconocimiento'}
+                    to={'/galeria'}
                     className="rounded-md bg-principal px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-principal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-principal"
                     >
                         Muro del reconocimiento

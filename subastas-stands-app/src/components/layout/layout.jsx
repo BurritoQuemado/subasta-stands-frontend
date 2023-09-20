@@ -16,14 +16,14 @@ const navigation = [
     },
     {
       name: 'Galería', 
-      href: '/galeria'
+      href: '/galeria-arte'
     }
 ]
 
 const navigation_logged = [
     {
       name: 'Muro del Reconocimiento',
-      href: '/muro-del-reconocimiento',
+      href: '/galeria',
       target: '_self'
     },
     {

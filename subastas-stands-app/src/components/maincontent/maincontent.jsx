@@ -69,13 +69,13 @@ function MainContent({logged, user_id}) {
                                     </p>
                                     <div className="mt-10 grid grid-cols-1 items-center justify-center gap-6">
                                         <Link
-                                        to={'/galeria'}
+                                        to={'/galeria-arte'}
                                         className="rounded-md bg-principal px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-principal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-principal"
                                         >
                                             Galería
                                         </Link>
                                         <Link
-                                        to={'/muro-del-reconocimiento'}
+                                        to={'/galeria'}
                                         className="rounded-md bg-principal px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-principal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-principal"
                                         >
                                             Muro del reconocimiento
