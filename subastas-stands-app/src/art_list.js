@@ -66,21 +66,21 @@ const art_list = [
         "title": "Ecosistema en Miniatura: Vida en el Gel",
         "desc": "Expresionismo Artificial",
         "img": EcosistemaMiniImg,
-        "href": "https://8th.io/t6un2"
+        "href": "https://8th.io/2mdk5"
       },
       {
         "id": 8,
         "title": "El Lienzo de la Clínica: Gel en Primer Plano",
         "desc": "Expesionismo Artificial",
         "img": LienzoClinicaImg,
-        "href": "https://8th.io/t6un2"
+        "href": "https://8th.io/2mdk5"
       },
       {
         "id": 9,
         "title": "Agarosa Abstracta: El Gel como Metáfora",
         "desc": "Expresionismo artificial",
         "img": AgarosaAbstractaImg,
-        "href": "https://8th.io/t6un2"
+        "href": "https://8th.io/8th.io/2mdk5"
       },
       {
         "id": 10,
