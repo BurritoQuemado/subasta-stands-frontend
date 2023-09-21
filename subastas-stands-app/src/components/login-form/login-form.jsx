@@ -107,14 +107,6 @@ function LoginForm ({ setLoggedIn, signin }) {
               {formErrors.password}
             </label>
           </div>
-    
-          <div className="flex items-center justify-between">
-            <div className="text-sm">
-              <button className="font-medium text-principal hover:text-principal" disabled={loading}>
-                Recuperar contraseña
-              </button>
-            </div>
-          </div>
         </form>
         <div className="mt-4">
           <button
