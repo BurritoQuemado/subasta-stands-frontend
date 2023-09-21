@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { Wallet } from "../components"
-import dummy from "../dummy.json";
 
 function WalletPage() {
     const { user_id } = useParams();
@@ -12,16 +11,16 @@ function WalletPage() {
     const [valid_codes, setValidCodes] = useState([])
     const URL = "https://subastas-stand-licon-a5fc970ae98d.herokuapp.com/getTransactions/"+user_id
     
-    const config = {
-        method: 'get',
-        url: URL,
-        headers: { 
-          'Content-Type': 'application/json',
-          "Access-Control-Allow-Origin": "*"
-        },
-    };
-
     useEffect(() => {
+
+        const config = {
+            method: 'get',
+            url: URL,
+            headers: { 
+              'Content-Type': 'application/json',
+              "Access-Control-Allow-Origin": "*"
+            },
+        };
 
         axios.request(config)
         .then(res => {
@@ -31,7 +30,7 @@ function WalletPage() {
             setValidCodes(res.data.valid_codes)
         })
 
-    },[])
+    },[user_id])
 
 
     return (
