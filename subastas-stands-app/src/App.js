@@ -12,9 +12,10 @@ import {
 } from './pages'
 import { Layout } from './components';
 function App () {
+  
 
-  const [user_id, setUserId] = useState(sessionStorage.getItem("user_id") || '');
-  const [logged, setLogged] = useState(sessionStorage.getItem("user_id") || false);
+  const [user_id, setUserId] = useState(window.localStorage.getItem("user_id"));
+  const [logged, setLogged] = useState(window.localStorage.getItem("logged"));
 
   const setLoggedIn = (logged, user_id) => {
     setLogged(logged);
