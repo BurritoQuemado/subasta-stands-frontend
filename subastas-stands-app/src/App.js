@@ -19,8 +19,8 @@ function App () {
   const setLoggedIn = (logged, user_id) => {
     setLogged(logged);
     setUserId(user_id);
-    sessionStorage.setItem("user_id", user_id);
-    sessionStorage.setItem("logged", logged);
+    window.localStorage.setItem("user_id", user_id);
+    window.localStorage.setItem("logged", logged);
   }
 
   const logout = () => {
