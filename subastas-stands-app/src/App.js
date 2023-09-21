@@ -27,13 +27,13 @@ function App () {
   const logout = () => {
     setLogged(false);
     setUserId('')
-    sessionStorage.setItem("user_id", null);
-    sessionStorage.setItem("logged", null);
+    window.localStorage.setItem("user_id", null);
+    window.localStorage.setItem("logged", null);
   }
 
   useEffect(() => {
-    var current_user = sessionStorage.getItem("user_id");
-    var current_logged = sessionStorage.getItem("logged");
+    var current_user = window.localStorage.getItem("user_id");
+    var current_logged = window.localStorage.getItem("logged");
     if(current_user !== null || current_logged !== null) {
       setLoggedIn(current_logged, current_user);
     }
