@@ -5,62 +5,70 @@ import { Link } from "react-router-dom";
 function LoginForm ({ setLoggedIn, signin }) {
 
   const initialValues = {
-      email: '',
-      password: '',
-  }
+    email: '',
+    password: '',
+}
 
-  const [formValues, setFormValues] = useState(initialValues);
-  const [formErrors, setFormErrors] = useState({});
-  const [loading, setLoading] = useState(false);
-  const [isSubmit, setIsSubmit] = useState(false);
+const [formValues, setFormValues] = useState(initialValues);
+const [formErrors, setFormErrors] = useState({});
+const [loading, setLoading] = useState(false);
+const [isSubmit, setIsSubmit] = useState(false);
 
-  const handleChange = (e) =>{
-      const { name, value } = e.target;
-      setFormValues({...formValues, [name]: value});
-  }
+const handleChange = (e) =>{
+    const { name, value } = e.target;
+    setFormValues({...formValues, [name]: value});
+}
 
-  const handleSubmit = (e) => {
-      e.preventDefault();
-      setLoading(true);
-      setFormErrors(validate(formValues));
-      setIsSubmit(true);
-  };
+const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setFormErrors(validate(formValues));
+    setIsSubmit(true);
+};
 
-  useEffect(() => {
-      if(Object.keys(formErrors).length === 0 && isSubmit){
-        fetch('https://subastas-stand-licon-a5fc970ae98d.herokuapp.com/signin', {
-          method: 'post',
-          headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify({
-            email: formValues.email,
-            password: formValues.password
-          })
-        })
-        .then(response => response.json())
-        .then(data => {
+useEffect(() => {
+    if(Object.keys(formErrors).length === 0 && isSubmit){
+      const fetchData = async () => {
+        try {
+          const response = await fetch('https://subastas-stand-licon-a5fc970ae98d.herokuapp.com/signin', {
+            method: 'post',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+              email: formValues.email,
+              password: formValues.password
+            })
+          });
+          const data = await response.json();
           setLoggedIn(true, data.id);
           signin();
-        })
-      }
-  }, [formErrors, formValues.email, formValues.password, isSubmit, setLoggedIn, signin])
+        } catch (error) {
+          console.error("Error during fetch: ", error);
+        } finally {
+          setLoading(false);
+          setIsSubmit(false);
+        }
+      };
+      fetchData();
+    }
+}, [formErrors, formValues.email, formValues.password, isSubmit])
 
-  const validate = (values) => {
-      const errors = {};
-      const regex = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
+const validate = (values) => {
+    const errors = {};
+    const regex = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
 
-      if(!values.email) {
-          errors.email = 'El correo es obligatorio';
-      } else if (!regex.test(values.email)) {
-          errors.email = 'Correo invalido';
-      }
+    if(!values.email) {
+        errors.email = 'El correo es obligatorio';
+    } else if (!regex.test(values.email)) {
+        errors.email = 'Correo invalido';
+    }
 
-      if(!values.password) {
-          errors.password = 'La contraseña es obligatoria';
-      } else if (values.password.length <= 3) {
-          errors.password = 'La contraseña debe tener al menos 4 caracteres';
-      }
-      return errors;
-  }
+    if(!values.password) {
+        errors.password = 'La contraseña es obligatoria';
+    } else if (values.password.length <= 3) {
+        errors.password = 'La contraseña debe tener al menos 4 caracteres';
+    }
+    return errors;
+}
 
 
     return(
