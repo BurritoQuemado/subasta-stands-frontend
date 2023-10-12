@@ -10,20 +10,6 @@ function Scanner ({ transactions, valid_codes, user_id }) {
     const [alreadyScanned, setAlreadyScanned] = useState(false);
     const url = 'https://subastas-stand-licon-a5fc970ae98d.herokuapp.com/registerTransaction';
 
-    const searchCode = (code) => {
-        const valid_code_found = valid_codes.find(valid_code => valid_code.code === code);
-        if (!valid_code_found || valid_code_found === undefined) {
-            setUnregistered(true);
-        } else {
-            setscannedCode(code);
-            const code_already_registered = transactions.find(transaction => transaction.code === code); 
-            if (!code_already_registered) {
-                const response = addBalance(valid_code_found);
-            } else {
-                setAlreadyScanned(true);
-            }
-        }
-    }
     const resetScanner = () => {
         setAlreadyScanned(false);
         setScanning(true);
@@ -37,7 +23,7 @@ function Scanner ({ transactions, valid_codes, user_id }) {
 
     const addBalance = async (code_found) => {
         try {
-            axios.request(url,{
+            return axios.request(url,{
                 method: 'post',
                 url: url,
                 headers: { 
@@ -50,10 +36,25 @@ function Scanner ({ transactions, valid_codes, user_id }) {
                     "title": code_found.description,
                     "amount": code_found.value
                 })
-            })
-
+            });
         } catch (err) {
             console.error(err)
+        }
+    }
+    
+    const searchCode = async (code) => {
+        const valid_code_found = valid_codes.find(valid_code => valid_code.code === code);
+        if (!valid_code_found || valid_code_found === undefined) {
+            setUnregistered(true);
+        } else {
+            setscannedCode(code);
+            const code_already_registered = transactions.find(transaction => transaction.code === code); 
+            if (!code_already_registered) {
+                const response = await addBalance(valid_code_found);
+                setAlreadyScanned(true);
+            } else {
+                setAlreadyScanned(true);
+            }
         }
     }
 
