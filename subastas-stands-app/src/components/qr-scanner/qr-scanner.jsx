@@ -65,8 +65,7 @@ function Scanner ({ transactions, valid_codes, user_id }) {
     const handleScan = (data) => {
         if(data != null) {
             setScanning(false);
-            searchCode(data.text);
-            this.scanner.reactivate()   
+            searchCode(data.text);  
         }
     } 
     
@@ -117,7 +116,6 @@ function Scanner ({ transactions, valid_codes, user_id }) {
                             facingMode: 'environment'
                         }
                     }
-                    innerRef={node => { this.scanner = node;}}
                     />
                     : null
                     } 
