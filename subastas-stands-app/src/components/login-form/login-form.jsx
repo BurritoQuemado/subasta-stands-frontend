@@ -12,6 +12,8 @@ function LoginForm ({ setLoggedIn, signin }) {
 const [formValues, setFormValues] = useState(initialValues);
 const [formErrors, setFormErrors] = useState({});
 const [loading, setLoading] = useState(false);
+const [loginError, setLoginError] = useState(false);
+const [loginErrorMessage, setLoginErrorMessage] = useState("");
 const [isSubmit, setIsSubmit] = useState(false);
 
 const handleChange = (e) =>{
@@ -27,29 +29,37 @@ const handleSubmit = (e) => {
 };
 
 useEffect(() => {
-    if(Object.keys(formErrors).length === 0 && isSubmit){
-      const fetchData = async () => {
-        try {
-          const response = await fetch('https://subastas-stand-licon-a5fc970ae98d.herokuapp.com/signin', {
-            method: 'post',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({
-              email: formValues.email,
-              password: formValues.password
-            })
-          });
+  if(Object.keys(formErrors).length === 0 && isSubmit){
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://subastas-stand-licon-a5fc970ae98d.herokuapp.com/signin', {
+          method: 'post',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+            email: formValues.email,
+            password: formValues.password
+          })
+        });
+
+        if (!response.ok) {
+          setLoginError(true);
+          setLoginErrorMessage('Contraseña o correo invalidos');
+          throw new Error('Server responded with a 400 status code');
+        } else {
           const data = await response.json();
           setLoggedIn(true, data.id);
           signin();
-        } catch (error) {
-          console.error("Error during fetch: ", error);
-        } finally {
-          setLoading(false);
-          setIsSubmit(false);
+
         }
-      };
-      fetchData();
-    }
+      } catch (error) {
+        console.error("Error during fetch: ", error);
+      } finally {
+        setLoading(false);
+        setIsSubmit(false);
+      }
+    };
+    fetchData();
+  }
 }, [formErrors, formValues.email, formValues.password, isSubmit])
 
 const validate = (values) => {
@@ -74,6 +84,16 @@ const validate = (values) => {
     return(
       <>
         <form className="space-y-6">
+          {
+            loginError ? 
+            <div>
+              <label className="block text-sm font-medium text-red-600">
+                {loginErrorMessage}
+              </label>
+            </div>
+            : null
+          }
+          
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
               Correo Electronico
