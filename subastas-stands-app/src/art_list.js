@@ -154,6 +154,13 @@ const art_list = [
       "img": ElEnsambleImg,
       "href": "https://8th.io/2mdk5"
     },
+    {
+      "id": 7,
+      "title": "Amor a la ciencia",
+      "desc": "Inteligencia Artificial en Óleo",
+      "img": AmorALaCienciaImg,
+      "href": "https://8th.io/5fv7x"
+    }
   ]
   
   export default art_list;
