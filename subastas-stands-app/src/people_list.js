@@ -4,7 +4,7 @@ import AlexanderReussImg from './assets/images/people/alexander-reuss.jpg'
 import NoelRImg from './assets/images/people/noel-r.jpg'
 import PaulMorawitzImg from './assets/images/people/paul-morawitz.jpg'
 import EvaEngvallImg from './assets/images/people/eva-engvall.jpg'
-import PeterPerlmanImg from './assets/images/people/peter-perlmanjpg'
+import PeterPerlmanImg from './assets/images/people/peter-perlman.jpg'
 import AndrewBuchananImg from './assets/images/people/andrew-buchanan.jpg'
 
 const people_list = [
