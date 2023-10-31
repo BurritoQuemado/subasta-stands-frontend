@@ -35,89 +35,125 @@ const art_list = [
       "img": DiagnosticoCromaticoImg,
       "href": "https://8th.io/fchc8"
     },
-      {
-        "id": 3,
-        "title": "Centrífuga de Sueños: Spinning hacia la Verdad",
-        "desc": "Acrilico artificial",
-        "img": CentrifugaSuenosImg,
-        "href": "https://8th.io/fchc8"
-      },
-      {
-        "id": 4,
-        "title": "Entre Probetas y otras: Un Brindis al Análisis",
-        "desc": "Acrílico Anónimo",
-        "img": EntreProbetasImg,
-        "href": "https://8th.io/fchc8"
-      },
-      {
-        "id": 5,
-        "title": "Serología en Sepia: El Tono de los Test",
-        "desc": "Fotografía en Acrílico Artificial",
-        "img": SerologiaSepiaImg,
-        "href": "https://8th.io/5fv7x"
-      },
-      {
-        "id": 6,
-        "title": "Sufrida Vida: La Transfusión como Arte",
-        "desc": "Óleo Artificial",
-        "img": SufridaVidaImg,
-        "href": "https://8th.io/t6un2"
-      },
-      {
-        "id": 8,
-        "title": "Autorretrato lineal",
-        "desc": "Inteligencia Artificial en Óleo",
-        "img": AutoretratoLinealImg,
-        "href": "https://8th.io/5fv7x"
-      },
-      {
-        "id": 9,
-        "title": "Del rito a la ciencia",
-        "desc": "Inteligencia Artificial en Óleo",
-        "img": DelRitoALaCienciaImg,
-        "href": "https://8th.io/t6un2"
-      },
-      {
-        "id": 10,
-        "title": "Día de seminario",
-        "desc": "Inteligencia Artificial en Óleo",
-        "img": DiaDeSeminarioImg,
-        "href": "https://8th.io/5fv7x"
-      },{
-        "id": 11,
-        "title": "Prueba y error",
-        "desc": "Inteligencia Artificial en Óleo",
-        "img": PruebaYErrorImg,
-        "href": "https://8th.io/t6un2"
-      },
-        {
-          "id": 14,
-          "title": "El Teorema de Mondrian",
-          "desc": "Acrílico Anónimo",
-          "img": ELTeoremaDeMondrianImg,
-          "href": "https://8th.io/fchc8"
-        },
-        {
-          "id": 15,
-          "title": "Entre la vida y la muerte",
-          "desc": "Fotografía en Acrílico Artificial",
-          "img": EntreLaVidaYLaMuerteImg,
-          "href": "https://8th.io/t6un2"
-        },
-        {
-          "id": 17,
-          "title": "La quietud científica",
-          "desc": "Inteligencia Artificial en Óleo",
-          "img": LaQuietudCientificaImg,
-          "href": "https://8th.io/5fv7x"
-        },
-        {
-          "id": 18,
-          "title": "Las mujeres de la ciencia",
-          "desc": "Inteligencia Artificial en Óleo",
-          "img": LasMujeresDeLaCienciaImg,
-          "href": "https://8th.io/fchc8"
-        }
+    {
+      "id": 3,
+      "title": "Centrífuga de Sueños: Spinning hacia la Verdad",
+      "desc": "Acrilico artificial",
+      "img": CentrifugaSuenosImg,
+      "href": "https://8th.io/fchc8"
+    },
+    {
+      "id": 4,
+      "title": "Entre Probetas y otras: Un Brindis al Análisis",
+      "desc": "Acrílico Anónimo",
+      "img": EntreProbetasImg,
+      "href": "https://8th.io/fchc8"
+    },
+    {
+      "id": 5,
+      "title": "Serología en Sepia: El Tono de los Test",
+      "desc": "Fotografía en Acrílico Artificial",
+      "img": SerologiaSepiaImg,
+      "href": "https://8th.io/5fv7x"
+    },
+    {
+      "id": 6,
+      "title": "Sufrida Vida: La Transfusión como Arte",
+      "desc": "Óleo Artificial",
+      "img": SufridaVidaImg,
+      "href": "https://8th.io/t6un2"
+    },
+    {
+      "id": 8,
+      "title": "Autorretrato lineal",
+      "desc": "Inteligencia Artificial en Óleo",
+      "img": AutoretratoLinealImg,
+      "href": "https://8th.io/5fv7x"
+    },
+    {
+      "id": 9,
+      "title": "Del rito a la ciencia",
+      "desc": "Inteligencia Artificial en Óleo",
+      "img": DelRitoALaCienciaImg,
+      "href": "https://8th.io/t6un2"
+    },
+    {
+      "id": 10,
+      "title": "Día de seminario",
+      "desc": "Inteligencia Artificial en Óleo",
+      "img": DiaDeSeminarioImg,
+      "href": "https://8th.io/5fv7x"
+    },
+    {
+      "id": 11,
+      "title": "Prueba y error",
+      "desc": "Inteligencia Artificial en Óleo",
+      "img": PruebaYErrorImg,
+      "href": "https://8th.io/t6un2"
+    },
+    {
+      "id": 14,
+      "title": "El Teorema de Mondrian",
+      "desc": "Inteligencia Artificial en Óleo",
+      "img": ELTeoremaDeMondrianImg,
+      "href": "https://8th.io/fchc8"
+    },
+    {
+      "id": 15,
+      "title": "Entre la vida y la muerte",
+      "desc": "Inteligencia Artificial en Óleo",
+      "img": EntreLaVidaYLaMuerteImg,
+      "href": "https://8th.io/t6un2"
+    },
+    {
+      "id": 17,
+      "title": "La quietud científica",
+      "desc": "Inteligencia Artificial en Óleo",
+      "img": LaQuietudCientificaImg,
+      "href": "https://8th.io/5fv7x"
+    },
+    {
+      "id": 18,
+      "title": "Las mujeres de la ciencia",
+      "desc": "Inteligencia Artificial en Óleo",
+      "img": LasMujeresDeLaCienciaImg,
+      "href": "https://8th.io/fchc8"
+    },
+    {
+      "id": 19,
+      "title": "Matraces de Kahlo",
+      "desc": "Inteligencia Artificial en Óleo",
+      "img": MatracesDeKahloImg,
+      "href": "https://8th.io/2mdk5"
+    },
+    {
+      "id": 20,
+      "title": "Mente abierta",
+      "desc": "Inteligencia Artificial en Óleo",
+      "img": MenteAbiertaImg,
+      "href": "https://8th.io/2mdk5"
+    },
+    {
+      "id": 16,
+      "title": "La Gioconda según el S.XX",
+      "desc": "Inteligencia Artificial en Óleo",
+      "img": LaGiocondaImg,
+      "href": "https://8th.io/2mdk5"
+    },
+    {
+      "id": 12,
+      "title": "El debate",
+      "desc": "Inteligencia Artificial en Óleo",
+      "img": ElDebateImg,
+      "href": "https://8th.io/2mdk5"
+    },
+    {
+      "id": 13,
+      "title": "El Ensamble",
+      "desc": "Inteligencia Artificial en Óleo",
+      "img": ElEnsambleImg,
+      "href": "https://8th.io/2mdk5"
+    },
   ]
   
   export default art_list;
