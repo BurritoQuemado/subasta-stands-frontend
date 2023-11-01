@@ -15,7 +15,6 @@ import EntreLaVidaYLaMuerteImg from './assets/images/art/entre-la-vida-y-la-muer
 import LaGiocondaImg from './assets/images/art/la-gioconda-segun-el-sxx.jpg';
 import LaQuietudCientificaImg from './assets/images/art/la-quietud-cientifica.jpg';
 import LasMujeresDeLaCienciaImg from './assets/images/art/las-mujeres-de-la-ciencia.jpg';
-import MatracesDeKahloImg from './assets/images/art/matraces-de-kahlo.jpg';
 import MenteAbiertaImg from './assets/images/art/mente-abierta.jpg';
 import PruebaYErrorImg from './assets/images/art/prueba-y-error.jpg';
 
@@ -118,13 +117,6 @@ const art_list = [
       "desc": "Inteligencia Artificial en Óleo",
       "img": LasMujeresDeLaCienciaImg,
       "href": "https://8th.io/fchc8"
-    },
-    {
-      "id": 19,
-      "title": "Matraces de Kahlo",
-      "desc": "Inteligencia Artificial en Óleo",
-      "img": MatracesDeKahloImg,
-      "href": "https://8th.io/2mdk5"
     },
     {
       "id": 20,
